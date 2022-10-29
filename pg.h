@@ -107,3 +107,10 @@ int sceIoRename(const char *oldname, const char *newname);
 //int sceIoDevctl(const char *name int cmd, void *arg, size_t arglen, void *buf, size_t *buflen); 
 
 
+void sceKernelExitGame(void); 
+void SetExitCallback(int cbid); 
+void PowerSetCallback(int zero, int cbid); 
+void KernelPollCallbacks(void); 
+int  sceKernelCreateCallbacks(const char *name, void *func); 
+int  sceKernelCreateThread(const char *name, void *func, int a,int b,int c,int d);
+
